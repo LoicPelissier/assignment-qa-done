@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171022 23:39:58.058" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/loic/Documents/robot/Tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="US01_TC01_Display the current date">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:39:58.806" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:39:58.807" starttime="20171022 23:39:58.305"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:39:58.811" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:02.856" starttime="20171022 23:39:58.810"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:02.985" starttime="20171022 23:40:02.860"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:02.986" starttime="20171022 23:40:02.858"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:02.987" starttime="20171022 23:40:02.986"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:02.992" starttime="20171022 23:40:02.987"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:03.039" starttime="20171022 23:40:02.993"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:03.039" starttime="20171022 23:40:02.992"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:03.039" starttime="20171022 23:39:58.809"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:03.040" starttime="20171022 23:39:58.808"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:03.061" starttime="20171022 23:40:03.042"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:03.062" starttime="20171022 23:40:03.041"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:03.062" starttime="20171022 23:40:03.040"></status>
+</kw>
+<kw name="Then the date of the day is displayed on the top right part of the page" library="Keywords">
+<kw name="Get Horizontal Position" library="SeleniumLibrary">
+<doc>Returns horizontal position of element identified by `locator`.</doc>
+<arguments>
+<arg>${DATE_LOCATOR}</arg>
+</arguments>
+<assign>
+<var>${X}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.121" level="INFO">${X} = 25.0</msg>
+<status status="PASS" endtime="20171022 23:40:03.122" starttime="20171022 23:40:03.064"></status>
+</kw>
+<kw name="Get Vertical Position" library="SeleniumLibrary">
+<doc>Returns vertical position of element identified by `locator`.</doc>
+<arguments>
+<arg>${DATE_LOCATOR}</arg>
+</arguments>
+<assign>
+<var>${Y}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.148" level="INFO">${Y} = 47.0</msg>
+<status status="PASS" endtime="20171022 23:40:03.149" starttime="20171022 23:40:03.122"></status>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<doc>Returns width and height of element identified by `locator`.</doc>
+<arguments>
+<arg>${DATE_LOCATOR}</arg>
+</arguments>
+<assign>
+<var>${EltW}</var>
+<var>${EltH}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.186" level="INFO">${EltW} = 92</msg>
+<msg timestamp="20171022 23:40:03.186" level="INFO">${EltH} = 27</msg>
+<status status="PASS" endtime="20171022 23:40:03.187" starttime="20171022 23:40:03.149"></status>
+</kw>
+<kw name="Get Window Size" library="SeleniumLibrary">
+<doc>Returns current window size as `width` then `height`.</doc>
+<assign>
+<var>${WinW}</var>
+<var>${WinH}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.191" level="INFO">${WinW} = 400</msg>
+<msg timestamp="20171022 23:40:03.192" level="INFO">${WinH} = 800</msg>
+<status status="PASS" endtime="20171022 23:40:03.192" starttime="20171022 23:40:03.187"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>(${Y}+(${EltH}/2))&lt;(${WinH}/2)</arg>
+</arguments>
+<assign>
+<var>${IsTop}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.193" level="INFO">${IsTop} = True</msg>
+<status status="PASS" endtime="20171022 23:40:03.193" starttime="20171022 23:40:03.192"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>(${X}+(${EltW}/2))&gt;(${WinW}/2)</arg>
+</arguments>
+<assign>
+<var>${IsRight}</var>
+</assign>
+<msg timestamp="20171022 23:40:03.195" level="INFO">${IsRight} = False</msg>
+<status status="PASS" endtime="20171022 23:40:03.195" starttime="20171022 23:40:03.194"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${IsTop}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:03.196" starttime="20171022 23:40:03.195"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${IsRight}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:03.197" level="FAIL">'False' should be true.</msg>
+<status status="FAIL" endtime="20171022 23:40:03.197" starttime="20171022 23:40:03.196"></status>
+</kw>
+<status status="FAIL" endtime="20171022 23:40:03.198" starttime="20171022 23:40:03.063"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:03.314" starttime="20171022 23:40:03.199"></status>
+</kw>
+<tags>
+<tag>display</tag>
+<tag>us01</tag>
+</tags>
+<status status="FAIL" endtime="20171022 23:40:03.315" critical="yes" starttime="20171022 23:39:58.303">'False' should be true.</status>
+</test>
+<test id="s1-t2" name="US02_TC01_View the list of pets">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:03.824" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:03.824" starttime="20171022 23:40:03.319"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:03.828" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:07.600" starttime="20171022 23:40:03.827"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:07.716" starttime="20171022 23:40:07.602"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.716" starttime="20171022 23:40:07.600"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:07.717" starttime="20171022 23:40:07.717"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:07.720" starttime="20171022 23:40:07.718"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:07.764" starttime="20171022 23:40:07.722"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.764" starttime="20171022 23:40:07.720"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.765" starttime="20171022 23:40:03.826"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.765" starttime="20171022 23:40:03.825"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:07.787" starttime="20171022 23:40:07.770"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.788" starttime="20171022 23:40:07.769"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.788" starttime="20171022 23:40:07.766"></status>
+</kw>
+<kw name="Then the list of pets is displayed in a table like component" library="Keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_AS_TABLE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:07.835" level="INFO">Current page contains element 'xpath=//h3[text()="List of Pets"]/parent::div/table/tbody/tr[@class="pet-item"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:07.835" starttime="20171022 23:40:07.789"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.836" starttime="20171022 23:40:07.789"></status>
+</kw>
+<kw name="And the user is able to view his pets name and status" library="Keywords">
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>Donald</arg>
+<arg>Out of stock</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:07.899" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="Donald"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="Out of stock"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:07.899" starttime="20171022 23:40:07.839"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.899" starttime="20171022 23:40:07.838"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>Pluto</arg>
+<arg>Available</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:07.945" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="Pluto"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="Available"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:07.945" starttime="20171022 23:40:07.901"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.945" starttime="20171022 23:40:07.900"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>Mickey</arg>
+<arg>Available</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:07.989" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="Mickey"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="Available"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:07.990" starttime="20171022 23:40:07.947"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.990" starttime="20171022 23:40:07.946"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:07.990" starttime="20171022 23:40:07.836"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:08.071" starttime="20171022 23:40:07.991"></status>
+</kw>
+<tags>
+<tag>read</tag>
+<tag>us02</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:08.072" critical="yes" starttime="20171022 23:40:03.317"></status>
+</test>
+<test id="s1-t3" name="US02_TC02_View a 100 pets list">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:08.580" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:08.580" starttime="20171022 23:40:08.075"></status>
+</kw>
+<kw name="Given a list of 100 pets has been created in the webapp" library="Keywords">
+<kw name="Create Json Db" library="AssignmentSetup">
+<arguments>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating 100 records</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 1</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 2</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 3</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 4</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 5</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 6</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 7</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 8</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 9</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 10</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 11</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 12</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 13</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 14</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 15</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 16</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 17</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 18</msg>
+<msg timestamp="20171022 23:40:09.087" level="INFO">Creating line 19</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 20</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 21</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 22</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 23</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 24</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 25</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 26</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 27</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 28</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 29</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 30</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 31</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 32</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 33</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 34</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 35</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 36</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 37</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 38</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 39</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 40</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 41</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 42</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 43</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 44</msg>
+<msg timestamp="20171022 23:40:09.088" level="INFO">Creating line 45</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 46</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 47</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 48</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 49</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 50</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 51</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 52</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 53</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 54</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 55</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 56</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 57</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 58</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 59</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 60</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 61</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 62</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 63</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 64</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 65</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 66</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 67</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 68</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 69</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 70</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 71</msg>
+<msg timestamp="20171022 23:40:09.089" level="INFO">Creating line 72</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 73</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 74</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 75</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 76</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 77</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 78</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 79</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 80</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 81</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 82</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 83</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 84</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 85</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 86</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 87</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 88</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 89</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 90</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 91</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 92</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 93</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 94</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 95</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 96</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 97</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 98</msg>
+<msg timestamp="20171022 23:40:09.090" level="INFO">Creating line 99</msg>
+<msg timestamp="20171022 23:40:09.091" level="INFO">Creating line 100</msg>
+<status status="PASS" endtime="20171022 23:40:09.100" starttime="20171022 23:40:08.583"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:09.101" starttime="20171022 23:40:08.581"></status>
+</kw>
+<kw name="And the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:09.105" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:13.056" starttime="20171022 23:40:09.104"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.176" starttime="20171022 23:40:13.059"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.177" starttime="20171022 23:40:13.057"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.178" starttime="20171022 23:40:13.177"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.196" starttime="20171022 23:40:13.179"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.252" starttime="20171022 23:40:13.197"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.253" starttime="20171022 23:40:13.196"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.253" starttime="20171022 23:40:09.103"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.253" starttime="20171022 23:40:09.102"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.277" starttime="20171022 23:40:13.256"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.277" starttime="20171022 23:40:13.255"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.277" starttime="20171022 23:40:13.254"></status>
+</kw>
+<kw name="And a list of 100 pets is loaded" library="Keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>return document.evaluate('count(${PET_LIST_LINE_LOCATOR})',document,null,XPathResult.NUMBER_TYPE,null).numberValue;</arg>
+</arguments>
+<assign>
+<var>${actual_count}</var>
+</assign>
+<msg timestamp="20171022 23:40:13.280" level="INFO">Executing JavaScript:
+return document.evaluate('count(//h3[text()="List of Pets"]/parent::div/table/tbody/tr[@class="pet-item"])',document,null,XPathResult.NUMBER_TYPE,null).numberValue;</msg>
+<msg timestamp="20171022 23:40:13.292" level="INFO">${actual_count} = 100</msg>
+<status status="PASS" endtime="20171022 23:40:13.293" starttime="20171022 23:40:13.279"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${actual_count}==${expected_count}</arg>
+</arguments>
+<assign>
+<var>${correct_count_loaded}</var>
+</assign>
+<msg timestamp="20171022 23:40:13.294" level="INFO">${correct_count_loaded} = True</msg>
+<status status="PASS" endtime="20171022 23:40:13.294" starttime="20171022 23:40:13.293"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${correct_count_loaded}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.295" starttime="20171022 23:40:13.294"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.295" starttime="20171022 23:40:13.278"></status>
+</kw>
+<kw name="Then the list of pets is displayed in a table like component" library="Keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_AS_TABLE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:13.345" level="INFO">Current page contains element 'xpath=//h3[text()="List of Pets"]/parent::div/table/tbody/tr[@class="pet-item"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:13.346" starttime="20171022 23:40:13.297"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.346" starttime="20171022 23:40:13.296"></status>
+</kw>
+<kw name="And the page is loaded in less then 2 seconds" library="Keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>return (window.performance.timing.loadEventEnd - window.performance.timing.navigationStart)/1000;</arg>
+</arguments>
+<assign>
+<var>${actual_duration}</var>
+</assign>
+<msg timestamp="20171022 23:40:13.348" level="INFO">Executing JavaScript:
+return (window.performance.timing.loadEventEnd - window.performance.timing.navigationStart)/1000;</msg>
+<msg timestamp="20171022 23:40:13.358" level="INFO">${actual_duration} = 1.404</msg>
+<status status="PASS" endtime="20171022 23:40:13.359" starttime="20171022 23:40:13.348"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${actual_duration}&lt;=${expected_duration}</arg>
+</arguments>
+<assign>
+<var>${duration_is_ok}</var>
+</assign>
+<msg timestamp="20171022 23:40:13.360" level="INFO">${duration_is_ok} = True</msg>
+<status status="PASS" endtime="20171022 23:40:13.361" starttime="20171022 23:40:13.359"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${duration_is_ok}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:13.362" starttime="20171022 23:40:13.361"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:13.362" starttime="20171022 23:40:13.347"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:13.461" starttime="20171022 23:40:13.363"></status>
+</kw>
+<tags>
+<tag>performance</tag>
+<tag>read</tag>
+<tag>us02</tag>
+<tag>volume</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:13.461" critical="yes" starttime="20171022 23:40:08.074"></status>
+</test>
+<test id="s1-t4" name="US03_TC01_Name and Status are mandatory for creation">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:13.984" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:13.985" starttime="20171022 23:40:13.467"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:13.990" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:17.650" starttime="20171022 23:40:13.988"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.770" starttime="20171022 23:40:17.652"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.770" starttime="20171022 23:40:17.650"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.771" starttime="20171022 23:40:17.770"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.774" starttime="20171022 23:40:17.771"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.821" starttime="20171022 23:40:17.776"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.821" starttime="20171022 23:40:17.775"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.821" starttime="20171022 23:40:13.987"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.821" starttime="20171022 23:40:13.986"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.841" starttime="20171022 23:40:17.824"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.841" starttime="20171022 23:40:17.823"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.841" starttime="20171022 23:40:17.822"></status>
+</kw>
+<kw name="And the user tries to add a new pet" library="Keywords">
+<kw name="Empty Placeholder" library="AdditionalSeleniumKeyword">
+<status status="PASS" endtime="20171022 23:40:17.844" starttime="20171022 23:40:17.843"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.844" starttime="20171022 23:40:17.842"></status>
+</kw>
+<kw name="Then Pet Name and Pet status are both mandatory fields" library="Keywords">
+<kw name="Create Pet Without Status" library="Keywords">
+<arguments>
+<arg>US03TC01NT01 Name</arg>
+</arguments>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:17.867" starttime="20171022 23:40:17.848"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:17.868" starttime="20171022 23:40:17.847"></status>
+</kw>
+<kw name="Input Name" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:17.870" level="INFO">Typing text 'US03TC01NT01 Name' into text field 'xpath=//div[@class="pet-app"]//input[contains(@class,"pet-name")]'</msg>
+<status status="PASS" endtime="20171022 23:40:18.357" starttime="20171022 23:40:17.869"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:18.358" starttime="20171022 23:40:17.868"></status>
+</kw>
+<kw name="Click Create" library="Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${PETCREATE_BUTTON_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:18.360" level="INFO">Clicking button 'xpath=//button[text()="Create"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:18.593" starttime="20171022 23:40:18.359"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:18.597" starttime="20171022 23:40:18.358"></status>
+</kw>
+<kw name="Pet With Only Name Should Not Exist In The List" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is not found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_EMPTYSTATUS_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:18.682" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;&lt;head&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+		&lt;title&gt;Petstore - Assignment&lt;/title&gt;
+		&lt;link rel="stylesheet" href="dist/bootstrap.min.css" /&gt;
+		&lt;link rel="stylesheet" type="text/css" href="app/assets/styles.css" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class="assignment-masthead"&gt;
+			&lt;div class="container"&gt;
+				&lt;nav class="assignment-nav"&gt;
+					&lt;div class="assignment-nav-item active"&gt;Hello stranger, today's date is : &lt;span class="banner-date"&gt;&lt;div&gt;22-10-2017&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;/nav&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="assignment-header"&gt;
+				&lt;h1 class="assignment-title"&gt;Petstore webapp&lt;/h1&gt;
+				&lt;p class="lead assignment-description"&gt;Hello developer, please note that this app uses a subset of &lt;a href="http://petstore.swagger.io/"&gt;http://petstore.swagger.io/&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="row"&gt;
+				&lt;div class="col-sm-12 assignment-main"&gt;
+					&lt;div class="assignment-post"&gt;
+						&lt;div class="pet-app"&gt;&lt;div&gt;&lt;div class="pet-form"&gt;&lt;div class="card card-block"&gt;
+	&lt;h3 class="card-title"&gt;Create new Pet&lt;/h3&gt;
+	&lt;div&gt;
+		&lt;form&gt;
+			&lt;div class="form-group"&gt;
+				&lt;div class="input-group"&gt;
+					&lt;span class="input-group-addon"&gt;Name&lt;/span&gt;
+					&lt;input type="text" class="form-control pet-name" placeholder="Pet Name" /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="form-group"&gt;
+				&lt;div class="input-group"&gt;
+					&lt;span class="input-group-addon"&gt;Status&lt;/span&gt;
+					&lt;input type="text" class="form-control pet-status" placeholder="Pet Status" /&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;button type="button" id="btn-create" class="btn btn-primary create"&gt;Create&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="pet-list"&gt;&lt;div class="card card-block"&gt;
+    &lt;h3 class="card-title"&gt;List of Pets&lt;/h3&gt;
+    &lt;table class="table table-hover"&gt;
+            &lt;thead class="thead-default"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Name&lt;/th&gt;
+                &lt;th&gt;Status&lt;/th&gt;
+                &lt;th&gt;Action&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody class="pet-list"&gt;
+            &lt;tr class="pet-item"&gt;&lt;td&gt;
+        &lt;span class="pet lbl pet-name"&gt;Donald&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-name" value="Donald" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+        &lt;span class="pet lbl pet-status"&gt;Out of stock&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-status" value="Out of stock" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+    &lt;button type="button" class="btn btn-danger delete"&gt;Delete&lt;/button&gt;
+&lt;/td&gt;
+
+&lt;/tr&gt;&lt;tr class="pet-item"&gt;&lt;td&gt;
+        &lt;span class="pet lbl pet-name"&gt;Pluto&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-name" value="Pluto" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+        &lt;span class="pet lbl pet-status"&gt;Available&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-status" value="Available" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+    &lt;button type="button" class="btn btn-danger delete"&gt;Delete&lt;/button&gt;
+&lt;/td&gt;
+
+&lt;/tr&gt;&lt;tr class="pet-item"&gt;&lt;td&gt;
+        &lt;span class="pet lbl pet-name"&gt;Mickey&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-name" value="Mickey" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+        &lt;span class="pet lbl pet-status"&gt;Available&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-status" value="Available" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+    &lt;button type="button" class="btn btn-danger delete"&gt;Delete&lt;/button&gt;
+&lt;/td&gt;
+
+&lt;/tr&gt;&lt;tr class="pet-item"&gt;&lt;td&gt;
+        &lt;span class="pet lbl pet-name"&gt;US03TC01NT01 Name&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-name" value="US03TC01NT01 Name" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+        &lt;span class="pet lbl pet-status"&gt;&lt;/span&gt;
+        &lt;input type="text" class="pet usr-input pet-status" value="" /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+    &lt;button type="button" class="btn btn-danger delete"&gt;Delete&lt;/button&gt;
+&lt;/td&gt;
+
+&lt;/tr&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;script type="text/javascript" src="dist/app.js"&gt;&lt;/script&gt;
+	
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171022 23:40:18.820" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171022 23:40:18.820" starttime="20171022 23:40:18.683"></status>
+</kw>
+<msg timestamp="20171022 23:40:18.823" level="FAIL">Page should not have contained element 'xpath=//span[contains(@class,"pet-name") and text()="US03TC01NT01 Name"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and string-length(text())=0]'</msg>
+<status status="FAIL" endtime="20171022 23:40:18.823" starttime="20171022 23:40:18.598"></status>
+</kw>
+<status status="FAIL" endtime="20171022 23:40:18.824" starttime="20171022 23:40:18.597"></status>
+</kw>
+<status status="FAIL" endtime="20171022 23:40:18.825" starttime="20171022 23:40:17.846"></status>
+</kw>
+<status status="FAIL" endtime="20171022 23:40:18.825" starttime="20171022 23:40:17.845"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:18.915" starttime="20171022 23:40:18.826"></status>
+</kw>
+<tags>
+<tag>create</tag>
+<tag>us03</tag>
+</tags>
+<status status="FAIL" endtime="20171022 23:40:18.915" critical="yes" starttime="20171022 23:40:13.465">Page should not have contained element 'xpath=//span[contains(@class,"pet-name") and text()="US03TC01NT01 Name"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and string-length(text())=0]'</status>
+</test>
+<test id="s1-t5" name="US03_TC02_Creation can be validated with button or keyboard">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:19.446" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:19.447" starttime="20171022 23:40:18.937"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:19.452" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:23.219" starttime="20171022 23:40:19.450"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.344" starttime="20171022 23:40:23.222"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.344" starttime="20171022 23:40:23.220"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.345" starttime="20171022 23:40:23.345"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.348" starttime="20171022 23:40:23.346"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.390" starttime="20171022 23:40:23.349"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.390" starttime="20171022 23:40:23.348"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.390" starttime="20171022 23:40:19.449"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.390" starttime="20171022 23:40:19.448"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.410" starttime="20171022 23:40:23.393"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.411" starttime="20171022 23:40:23.392"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.411" starttime="20171022 23:40:23.391"></status>
+</kw>
+<kw name="And the user has entered Name and Status" library="Keywords">
+<kw name="Empty Placeholder" library="AdditionalSeleniumKeyword">
+<status status="PASS" endtime="20171022 23:40:23.413" starttime="20171022 23:40:23.413"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.413" starttime="20171022 23:40:23.412"></status>
+</kw>
+<kw name="Then the user is able to validate his input by using either keyboard Enter key or by clicking on the create button" library="Keywords">
+<kw name="Create Pet Using Create Button" library="Keywords">
+<arguments>
+<arg>US03TC02PT01 Name</arg>
+<arg>US03TC02PT01 Status</arg>
+</arguments>
+<kw name="Input Pet Information" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+<arg>${status}</arg>
+</arguments>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:23.437" starttime="20171022 23:40:23.420"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:23.437" starttime="20171022 23:40:23.419"></status>
+</kw>
+<kw name="Input Name" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:23.439" level="INFO">Typing text 'US03TC02PT01 Name' into text field 'xpath=//div[@class="pet-app"]//input[contains(@class,"pet-name")]'</msg>
+<status status="PASS" endtime="20171022 23:40:24.018" starttime="20171022 23:40:23.439"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.018" starttime="20171022 23:40:23.438"></status>
+</kw>
+<kw name="Input Status" library="Keywords">
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PETSTATUS_LOCATOR}</arg>
+<arg>${status}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:24.021" level="INFO">Typing text 'US03TC02PT01 Status' into text field 'xpath=//div[@class="pet-app"]//input[contains(@class,"pet-status")]'</msg>
+<status status="PASS" endtime="20171022 23:40:24.561" starttime="20171022 23:40:24.020"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.562" starttime="20171022 23:40:24.019"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.562" starttime="20171022 23:40:23.416"></status>
+</kw>
+<kw name="Click Create" library="Keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${PETCREATE_BUTTON_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:24.565" level="INFO">Clicking button 'xpath=//button[text()="Create"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:24.786" starttime="20171022 23:40:24.563"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.786" starttime="20171022 23:40:24.562"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+<arg>${status}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:24.865" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="US03TC02PT01 Name"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="US03TC02PT01 Status"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:24.865" starttime="20171022 23:40:24.791"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.865" starttime="20171022 23:40:24.786"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.866" starttime="20171022 23:40:23.415"></status>
+</kw>
+<kw name="Create Pet Using Enter Key" library="Keywords">
+<arguments>
+<arg>US03TC02PT02 Name</arg>
+<arg>US03TC02PT02 Status</arg>
+</arguments>
+<kw name="Input Pet Information" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+<arg>${status}</arg>
+</arguments>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:24.885" starttime="20171022 23:40:24.869"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:24.885" starttime="20171022 23:40:24.868"></status>
+</kw>
+<kw name="Input Name" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:24.888" level="INFO">Typing text 'US03TC02PT02 Name' into text field 'xpath=//div[@class="pet-app"]//input[contains(@class,"pet-name")]'</msg>
+<status status="PASS" endtime="20171022 23:40:25.290" starttime="20171022 23:40:24.887"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.291" starttime="20171022 23:40:24.886"></status>
+</kw>
+<kw name="Input Status" library="Keywords">
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PETSTATUS_LOCATOR}</arg>
+<arg>${status}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:25.293" level="INFO">Typing text 'US03TC02PT02 Status' into text field 'xpath=//div[@class="pet-app"]//input[contains(@class,"pet-status")]'</msg>
+<status status="PASS" endtime="20171022 23:40:25.704" starttime="20171022 23:40:25.292"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.705" starttime="20171022 23:40:25.291"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.705" starttime="20171022 23:40:24.867"></status>
+</kw>
+<kw name="Press Enter" library="Keywords">
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${PETCREATE_BUTTON_LOCATOR}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:25.867" starttime="20171022 23:40:25.706"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.868" starttime="20171022 23:40:25.705"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>${name}</arg>
+<arg>${status}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:25.910" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="US03TC02PT02 Name"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="US03TC02PT02 Status"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:25.911" starttime="20171022 23:40:25.870"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.911" starttime="20171022 23:40:25.868"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.911" starttime="20171022 23:40:24.866"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:25.911" starttime="20171022 23:40:23.414"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:26.014" starttime="20171022 23:40:25.912"></status>
+</kw>
+<tags>
+<tag>create</tag>
+<tag>us03</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:26.015" critical="yes" starttime="20171022 23:40:18.918"></status>
+</test>
+<test id="s1-t6" name="US03_TC03_Accessibility sequence check">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:26.519" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:26.520" starttime="20171022 23:40:26.018"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:26.523" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:30.275" starttime="20171022 23:40:26.522"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.398" starttime="20171022 23:40:30.278"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.399" starttime="20171022 23:40:30.276"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.400" starttime="20171022 23:40:30.399"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.403" starttime="20171022 23:40:30.401"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.446" starttime="20171022 23:40:30.404"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.446" starttime="20171022 23:40:30.404"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.446" starttime="20171022 23:40:26.521"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.447" starttime="20171022 23:40:26.521"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.466" starttime="20171022 23:40:30.449"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.466" starttime="20171022 23:40:30.448"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.467" starttime="20171022 23:40:30.447"></status>
+</kw>
+<kw name="And the user has focused on the Pet Name field" library="Keywords">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.536" starttime="20171022 23:40:30.468"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.536" starttime="20171022 23:40:30.468"></status>
+</kw>
+<kw name="Then the defined accessibility sequence should be respected when pressing the TAB key" library="Keywords">
+<kw name="Press TAB On Pet Name Field" library="Keywords">
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+<arg>\\9</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.660" starttime="20171022 23:40:30.540"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.660" starttime="20171022 23:40:30.539"></status>
+</kw>
+<kw name="Pet Status Field Should Have Focus" library="Keywords">
+<kw name="Element Should Be Focused" library="SeleniumLibrary">
+<doc>Verifies that element identified with `locator` is focused.</doc>
+<arguments>
+<arg>${PETSTATUS_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.710" starttime="20171022 23:40:30.662"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.710" starttime="20171022 23:40:30.661"></status>
+</kw>
+<kw name="Press TAB On Pet Status Field" library="Keywords">
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${PETSTATUS_LOCATOR}</arg>
+<arg>\\9</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.846" starttime="20171022 23:40:30.711"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.846" starttime="20171022 23:40:30.711"></status>
+</kw>
+<kw name="Create Button Should Have Focus" library="Keywords">
+<kw name="Element Should Be Focused" library="SeleniumLibrary">
+<doc>Verifies that element identified with `locator` is focused.</doc>
+<arguments>
+<arg>${PETCREATE_BUTTON_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:30.901" starttime="20171022 23:40:30.848"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.902" starttime="20171022 23:40:30.847"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:30.902" starttime="20171022 23:40:30.537"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:31.015" starttime="20171022 23:40:30.903"></status>
+</kw>
+<tags>
+<tag>accessibility</tag>
+<tag>us03</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:31.015" critical="yes" starttime="20171022 23:40:26.016"></status>
+</test>
+<test id="s1-t7" name="US03_TC04_Accessibility sequence check">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:31.520" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:31.520" starttime="20171022 23:40:31.018"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:31.524" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:35.348" starttime="20171022 23:40:31.523"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.466" starttime="20171022 23:40:35.350"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.467" starttime="20171022 23:40:35.349"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.471" starttime="20171022 23:40:35.467"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.476" starttime="20171022 23:40:35.471"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.524" starttime="20171022 23:40:35.482"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.524" starttime="20171022 23:40:35.476"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.524" starttime="20171022 23:40:31.522"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.525" starttime="20171022 23:40:31.521"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.545" starttime="20171022 23:40:35.527"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.545" starttime="20171022 23:40:35.526"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.545" starttime="20171022 23:40:35.525"></status>
+</kw>
+<kw name="And the user has focused on the Pet Status field" library="Keywords">
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>${PETSTATUS_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.611" starttime="20171022 23:40:35.547"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.611" starttime="20171022 23:40:35.546"></status>
+</kw>
+<kw name="And the user has pressed SHIFT + TAB" library="Keywords">
+<kw name="Press Shift Tab" library="AdditionalSeleniumKeyword">
+<status status="PASS" endtime="20171022 23:40:35.663" starttime="20171022 23:40:35.613"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.664" starttime="20171022 23:40:35.612"></status>
+</kw>
+<kw name="Then the focus should be on the Pet Name field" library="Keywords">
+<kw name="Element Should Be Focused" library="SeleniumLibrary">
+<doc>Verifies that element identified with `locator` is focused.</doc>
+<arguments>
+<arg>${PETNAME_LOCATOR}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:35.715" starttime="20171022 23:40:35.665"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:35.715" starttime="20171022 23:40:35.664"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:35.808" starttime="20171022 23:40:35.716"></status>
+</kw>
+<tags>
+<tag>accessibility</tag>
+<tag>us03</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:35.809" critical="yes" starttime="20171022 23:40:31.017"></status>
+</test>
+<test id="s1-t8" name="US04_TC01_Modify a pet">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:36.324" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:36.324" starttime="20171022 23:40:35.819"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:36.328" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:40.021" starttime="20171022 23:40:36.327"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:40.141" starttime="20171022 23:40:40.023"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.142" starttime="20171022 23:40:40.022"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:40.143" starttime="20171022 23:40:40.142"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:40.147" starttime="20171022 23:40:40.144"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:40.189" starttime="20171022 23:40:40.148"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.189" starttime="20171022 23:40:40.148"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.189" starttime="20171022 23:40:36.326"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.189" starttime="20171022 23:40:36.325"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:40.209" starttime="20171022 23:40:40.192"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.209" starttime="20171022 23:40:40.191"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.210" starttime="20171022 23:40:40.190"></status>
+</kw>
+<kw name="And the list of pets is displayed" library="Keywords">
+<kw name="the list of pets is displayed in a table like component" library="Keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_AS_TABLE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.255" level="INFO">Current page contains element 'xpath=//h3[text()="List of Pets"]/parent::div/table/tbody/tr[@class="pet-item"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:40.255" starttime="20171022 23:40:40.212"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.256" starttime="20171022 23:40:40.211"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.256" starttime="20171022 23:40:40.210"></status>
+</kw>
+<kw name="Then the user can edit a pet by clicking on its name or status" library="Keywords">
+<kw name="Click On Pet Name And Check It Is Editable" library="Keywords">
+<arguments>
+<arg>Mickey</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by `locator` is NOT visible.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${name}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.259" level="INFO">Verifying element 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-name") and @value="Mickey"]' is not visible.</msg>
+<status status="PASS" endtime="20171022 23:40:40.336" starttime="20171022 23:40:40.258"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate('${NON_EDITABLE_PETNAME_LOCATOR_PFX}${name}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.338" level="INFO">Executing JavaScript:
+document.evaluate('//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Mickey"]',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</msg>
+<status status="PASS" endtime="20171022 23:40:40.366" starttime="20171022 23:40:40.337"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${name}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.367" level="INFO">Verifying element 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-name") and @value="Mickey"]' is visible.</msg>
+<status status="PASS" endtime="20171022 23:40:40.398" starttime="20171022 23:40:40.366"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.399" starttime="20171022 23:40:40.257"></status>
+</kw>
+<kw name="Click On Pet Status And Check It Is Editable" library="Keywords">
+<arguments>
+<arg>Out of stock</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by `locator` is NOT visible.</doc>
+<arguments>
+<arg>${EDITABLE_PETSTATUS_LOCATOR_PFX}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.401" level="INFO">Verifying element 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-status") and @value="Out of stock"]' is not visible.</msg>
+<status status="PASS" endtime="20171022 23:40:40.469" starttime="20171022 23:40:40.400"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate('${NON_EDITABLE_PETSTATUS_LOCATOR_PFX}${status}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.470" level="INFO">Executing JavaScript:
+document.evaluate('//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-status") and text()="Out of stock"]',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</msg>
+<status status="PASS" endtime="20171022 23:40:40.492" starttime="20171022 23:40:40.469"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${EDITABLE_PETSTATUS_LOCATOR_PFX}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:40.493" level="INFO">Verifying element 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-status") and @value="Out of stock"]' is visible.</msg>
+<status status="PASS" endtime="20171022 23:40:40.533" starttime="20171022 23:40:40.493"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.533" starttime="20171022 23:40:40.399"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:40.533" starttime="20171022 23:40:40.257"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:40.642" starttime="20171022 23:40:40.534"></status>
+</kw>
+<tags>
+<tag>update</tag>
+<tag>us04</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:40.643" critical="yes" starttime="20171022 23:40:35.811"></status>
+</test>
+<test id="s1-t9" name="US04_TC02_Modify a pet and quit editing">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:41.159" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:41.160" starttime="20171022 23:40:40.648"></status>
+</kw>
+<kw name="Given the user has accessed the webapp" library="Keywords">
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:41.165" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:44.830" starttime="20171022 23:40:41.164"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:44.951" starttime="20171022 23:40:44.833"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:44.952" starttime="20171022 23:40:44.831"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:44.953" starttime="20171022 23:40:44.952"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:44.956" starttime="20171022 23:40:44.953"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:44.999" starttime="20171022 23:40:44.957"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:44.999" starttime="20171022 23:40:44.956"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:44.999" starttime="20171022 23:40:41.162"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.000" starttime="20171022 23:40:41.161"></status>
+</kw>
+<kw name="When the page is rendered on the browser" library="Keywords">
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:45.021" starttime="20171022 23:40:45.002"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.021" starttime="20171022 23:40:45.002"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.022" starttime="20171022 23:40:45.001"></status>
+</kw>
+<kw name="And the list of pets is displayed" library="Keywords">
+<kw name="the list of pets is displayed in a table like component" library="Keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_AS_TABLE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.064" level="INFO">Current page contains element 'xpath=//h3[text()="List of Pets"]/parent::div/table/tbody/tr[@class="pet-item"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:45.065" starttime="20171022 23:40:45.025"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.065" starttime="20171022 23:40:45.024"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.065" starttime="20171022 23:40:45.023"></status>
+</kw>
+<kw name="And the user is editing a pet" library="Keywords">
+<kw name="Empty Placeholder" library="AdditionalSeleniumKeyword">
+<status status="PASS" endtime="20171022 23:40:45.067" starttime="20171022 23:40:45.067"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.067" starttime="20171022 23:40:45.066"></status>
+</kw>
+<kw name="Then the user has 3 ways to quit the editing" library="Keywords">
+<kw name="Edit a Pet Name Then Press Enter" library="Keywords">
+<arguments>
+<arg>Donald</arg>
+<arg>Daffy</arg>
+</arguments>
+<kw name="Edit a Pet Name" library="Keywords">
+<arguments>
+<arg>${old_name}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate('${NON_EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.072" level="INFO">Executing JavaScript:
+document.evaluate('//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Donald"]',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</msg>
+<status status="PASS" endtime="20171022 23:40:45.107" starttime="20171022 23:40:45.071"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${PET_LIST_ITEM_SFX}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.109" level="INFO">Typing text 'Daffy' into text field 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-name") and @value="Donald"]'</msg>
+<status status="PASS" endtime="20171022 23:40:45.377" starttime="20171022 23:40:45.108"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.377" starttime="20171022 23:40:45.070"></status>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${PET_LIST_ITEM_SFX}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:45.484" starttime="20171022 23:40:45.377"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${NON_EDITABLE_PETNAME_LOCATOR_PFX}${new_name}${NON_EDITABLE_LIST_FIELD_PFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.532" level="INFO">Current page contains element '//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Daffy"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:45.532" starttime="20171022 23:40:45.485"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.533" starttime="20171022 23:40:45.069"></status>
+</kw>
+<kw name="Edit a Pet Name Then Press Escape" library="Keywords">
+<arguments>
+<arg>Pluto</arg>
+<arg>Droopy</arg>
+</arguments>
+<kw name="Edit a Pet Name" library="Keywords">
+<arguments>
+<arg>${old_name}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate('${NON_EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.536" level="INFO">Executing JavaScript:
+document.evaluate('//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Pluto"]',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</msg>
+<status status="PASS" endtime="20171022 23:40:45.557" starttime="20171022 23:40:45.535"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${PET_LIST_ITEM_SFX}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:45.558" level="INFO">Typing text 'Droopy' into text field 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-name") and @value="Pluto"]'</msg>
+<status status="PASS" endtime="20171022 23:40:45.854" starttime="20171022 23:40:45.557"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:45.855" starttime="20171022 23:40:45.534"></status>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${PET_LIST_ITEM_SFX}</arg>
+<arg>\\27</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:45.953" starttime="20171022 23:40:45.855"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${NON_EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${NON_EDITABLE_LIST_FIELD_PFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:46.004" level="INFO">Current page contains element '//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Pluto"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:46.005" starttime="20171022 23:40:45.953"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:46.005" starttime="20171022 23:40:45.533"></status>
+</kw>
+<kw name="Edit a Pet Name Then Click Elsewhere" library="Keywords">
+<arguments>
+<arg>Mickey</arg>
+<arg>Jerry</arg>
+</arguments>
+<kw name="Edit a Pet Name" library="Keywords">
+<arguments>
+<arg>${old_name}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate('${NON_EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20171022 23:40:46.008" level="INFO">Executing JavaScript:
+document.evaluate('//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Mickey"]',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();</msg>
+<status status="PASS" endtime="20171022 23:40:46.032" starttime="20171022 23:40:46.007"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EDITABLE_PETNAME_LOCATOR_PFX}${old_name}${PET_LIST_ITEM_SFX}</arg>
+<arg>${new_name}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:46.034" level="INFO">Typing text 'Jerry' into text field 'xpath=//tr[contains(@class,"pet-item")]/td/input[contains(@class,"pet-name") and @value="Mickey"]'</msg>
+<status status="PASS" endtime="20171022 23:40:46.289" starttime="20171022 23:40:46.032"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:46.290" starttime="20171022 23:40:46.006"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${PET_LIST_TITLE_LOCATOR}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:46.291" level="INFO">Clicking element '//h3[text()="List of Pets"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:46.463" starttime="20171022 23:40:46.290"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${NON_EDITABLE_PETNAME_LOCATOR_PFX}${new_name}${NON_EDITABLE_LIST_FIELD_PFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:46.540" level="INFO">Current page contains element '//tr[contains(@class,"pet-item")]/td/span[contains(@class,"pet-name") and text()="Jerry"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:46.541" starttime="20171022 23:40:46.464"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:46.541" starttime="20171022 23:40:46.005"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:46.541" starttime="20171022 23:40:45.068"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:46.632" starttime="20171022 23:40:46.542"></status>
+</kw>
+<tags>
+<tag>update</tag>
+<tag>us04</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:46.633" critical="yes" starttime="20171022 23:40:40.644"></status>
+</test>
+<test id="s1-t10" name="US05_TC01_Expose a REST API">
+<kw type="setup" name="Restore Json Db" library="AssignmentSetup">
+<msg timestamp="20171022 23:40:47.140" level="INFO">Restoring Json Db</msg>
+<status status="PASS" endtime="20171022 23:40:47.140" starttime="20171022 23:40:46.638"></status>
+</kw>
+<kw name="Read All Pets Through REST API" library="Keywords">
+<kw name="Read All Pets" library="RestApi">
+<assign>
+<var>${all_pets}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.151" level="INFO">Calling GET /api/pets</msg>
+<msg timestamp="20171022 23:40:47.151" level="INFO">Got response [
+  {
+    "id": 1,
+    "name": "Donald",
+    "status": "Out of stock"
+  },
+  {
+    "name": "Pluto",
+    "status": "Available",
+    "id": 2
+  },
+  {
+    "name": "Mickey",
+    "status": "Available",
+    "id": 3
+  }
+]</msg>
+<msg timestamp="20171022 23:40:47.152" level="INFO">${all_pets} = [{u'status': u'Out of stock', u'id': 1, u'name': u'Donald'}, {u'status': u'Available', u'name': u'Pluto', u'id': 2}, {u'status': u'Available', u'name': u'Mickey', u'id': 3}]</msg>
+<status status="PASS" endtime="20171022 23:40:47.152" starttime="20171022 23:40:47.142"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${all_pets}</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20171022 23:40:47.156" level="INFO">Length is 3</msg>
+<status status="PASS" endtime="20171022 23:40:47.157" starttime="20171022 23:40:47.154"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:47.157" starttime="20171022 23:40:47.141"></status>
+</kw>
+<kw name="Create Pet Trough REST API" library="Keywords">
+<arguments>
+<arg>US05TC01 Name</arg>
+<arg>US05TC01 Status</arg>
+</arguments>
+<kw name="Create Pet" library="RestApi">
+<arguments>
+<arg>${name}</arg>
+<arg>${status}</arg>
+</arguments>
+<assign>
+<var>${pet}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.168" level="INFO">Calling POST /api/pets/ with parameters: name=US05TC01 Name - status=US05TC01 Status</msg>
+<msg timestamp="20171022 23:40:47.168" level="INFO">Got response {
+  "status": "US05TC01 Status",
+  "name": "US05TC01 Name",
+  "id": 4
+}</msg>
+<msg timestamp="20171022 23:40:47.169" level="INFO">${pet} = {u'status': u'US05TC01 Status', u'name': u'US05TC01 Name', u'id': 4}</msg>
+<status status="PASS" endtime="20171022 23:40:47.169" starttime="20171022 23:40:47.160"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:47.169" starttime="20171022 23:40:47.158"></status>
+</kw>
+<kw name="Read Pet Through REST API" library="Keywords">
+<arguments>
+<arg>1</arg>
+<arg>Donald</arg>
+</arguments>
+<kw name="Read Pet" library="RestApi">
+<arguments>
+<arg>${pet_id}</arg>
+</arguments>
+<assign>
+<var>&amp;{pet}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.182" level="INFO">Calling GET /api/pets/1</msg>
+<msg timestamp="20171022 23:40:47.182" level="INFO">Got response {
+  "id": 1,
+  "name": "Donald",
+  "status": "Out of stock"
+}</msg>
+<msg timestamp="20171022 23:40:47.183" level="INFO">&amp;{pet} = { status=Out of stock | id=1 | name=Donald }</msg>
+<status status="PASS" endtime="20171022 23:40:47.183" starttime="20171022 23:40:47.171"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'&amp;{pet}[name]'=='${expected_name}'</arg>
+</arguments>
+<assign>
+<var>${actual_name_match_expected}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.185" level="INFO">${actual_name_match_expected} = True</msg>
+<status status="PASS" endtime="20171022 23:40:47.185" starttime="20171022 23:40:47.184"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${actual_name_match_expected}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:47.186" starttime="20171022 23:40:47.186"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:47.187" starttime="20171022 23:40:47.170"></status>
+</kw>
+<kw name="Update Pet Through REST API" library="Keywords">
+<arguments>
+<arg>1</arg>
+<arg>Daffy</arg>
+<arg>Available</arg>
+</arguments>
+<kw name="Update Pet" library="RestApi">
+<arguments>
+<arg>${pet_id}</arg>
+<arg>${new_name}</arg>
+<arg>${new_status}</arg>
+</arguments>
+<assign>
+<var>&amp;{updated_pet}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.196" level="INFO">Calling POST /api/pets/1 with parameters: name=Daffy - status=Available</msg>
+<msg timestamp="20171022 23:40:47.197" level="INFO">&amp;{updated_pet} = { status=Available | name=Daffy | id=1 }</msg>
+<status status="PASS" endtime="20171022 23:40:47.198" starttime="20171022 23:40:47.188"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'&amp;{updated_pet}[name]'=='${new_name}'</arg>
+</arguments>
+<assign>
+<var>${updated_name_match_parameters}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.200" level="INFO">${updated_name_match_parameters} = True</msg>
+<status status="PASS" endtime="20171022 23:40:47.200" starttime="20171022 23:40:47.198"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>'&amp;{updated_pet}[status]'=='${new_status}'</arg>
+</arguments>
+<assign>
+<var>${updated_status_match_parameter}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.202" level="INFO">${updated_status_match_parameter} = True</msg>
+<status status="PASS" endtime="20171022 23:40:47.202" starttime="20171022 23:40:47.200"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${updated_name_match_parameters}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:47.203" starttime="20171022 23:40:47.202"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${updated_status_match_parameter}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:47.205" starttime="20171022 23:40:47.204"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:47.206" starttime="20171022 23:40:47.187"></status>
+</kw>
+<kw name="Delete Pet Through REST API" library="Keywords">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Delete Pet" library="RestApi">
+<arguments>
+<arg>${pet_id}</arg>
+</arguments>
+<assign>
+<var>${res}</var>
+</assign>
+<msg timestamp="20171022 23:40:47.218" level="INFO">Colling DELETE /api/pets/2</msg>
+<msg timestamp="20171022 23:40:47.219" level="INFO">${res} = {}</msg>
+<status status="PASS" endtime="20171022 23:40:47.219" starttime="20171022 23:40:47.208"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:47.219" starttime="20171022 23:40:47.206"></status>
+</kw>
+<kw name="Open PetStore Page" library="Keywords">
+<arguments>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${browser}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:47.222" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'</msg>
+<status status="PASS" endtime="20171022 23:40:51.045" starttime="20171022 23:40:47.221"></status>
+</kw>
+<kw name="DoD Set Small Screen" library="Keywords">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets the `width` and `height` of the current window to the specified values.</doc>
+<arguments>
+<arg>400</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:51.168" starttime="20171022 23:40:51.047"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.169" starttime="20171022 23:40:51.046"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:51.170" starttime="20171022 23:40:51.169"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<arguments>
+<arg>${TIMEOUT}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:51.173" starttime="20171022 23:40:51.170"></status>
+</kw>
+<kw name="PetStore Page Should Be Displayed" library="Keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${PETSTORE_PAGE_IDENTIFIER}</arg>
+</arguments>
+<status status="PASS" endtime="20171022 23:40:51.216" starttime="20171022 23:40:51.174"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.216" starttime="20171022 23:40:51.173"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.216" starttime="20171022 23:40:47.220"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>US05TC01 Name</arg>
+<arg>US05TC01 Status</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:51.256" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="US05TC01 Name"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="US05TC01 Status"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:51.256" starttime="20171022 23:40:51.218"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.257" starttime="20171022 23:40:51.217"></status>
+</kw>
+<kw name="Pet Should Exist In The List" library="Keywords">
+<arguments>
+<arg>Daffy</arg>
+<arg>Available</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:51.296" level="INFO">Current page contains element 'xpath=//span[contains(@class,"pet-name") and text()="Daffy"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="Available"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:51.297" starttime="20171022 23:40:51.258"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.297" starttime="20171022 23:40:51.257"></status>
+</kw>
+<kw name="Pet Should Not Exist In The List" library="Keywords">
+<arguments>
+<arg>Pluto</arg>
+<arg>Available</arg>
+</arguments>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies element identified by `locator` is not found on the current page.</doc>
+<arguments>
+<arg>${PET_LIST_ITEM_PFX}${name}${PET_LIST_ITEM_MID}${status}${PET_LIST_ITEM_SFX}</arg>
+</arguments>
+<msg timestamp="20171022 23:40:51.339" level="INFO">Current page does not contain element 'xpath=//span[contains(@class,"pet-name") and text()="Pluto"]//ancestor::tr[@class="pet-item"]//span[contains(@class,"pet-status") and text()="Available"]'.</msg>
+<status status="PASS" endtime="20171022 23:40:51.339" starttime="20171022 23:40:51.298"></status>
+</kw>
+<status status="PASS" endtime="20171022 23:40:51.340" starttime="20171022 23:40:51.297"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171022 23:40:51.410" starttime="20171022 23:40:51.340"></status>
+</kw>
+<tags>
+<tag>api</tag>
+<tag>crud</tag>
+<tag>rest</tag>
+<tag>us05</tag>
+</tags>
+<status status="PASS" endtime="20171022 23:40:51.411" critical="yes" starttime="20171022 23:40:46.636"></status>
+</test>
+<doc>Petstore Regression
+
+Contain the Petstore Regression test cases
+</doc>
+<status status="FAIL" endtime="20171022 23:40:51.419" starttime="20171022 23:39:58.061"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="8">Critical Tests</stat>
+<stat fail="2" pass="8">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">accessibility</stat>
+<stat fail="0" pass="1">api</stat>
+<stat fail="1" pass="1">create</stat>
+<stat fail="0" pass="1">crud</stat>
+<stat fail="1" pass="0">display</stat>
+<stat fail="0" pass="1">performance</stat>
+<stat fail="0" pass="2">read</stat>
+<stat fail="0" pass="1">rest</stat>
+<stat fail="0" pass="2">update</stat>
+<stat fail="1" pass="0">us01</stat>
+<stat fail="0" pass="2">us02</stat>
+<stat fail="1" pass="3">us03</stat>
+<stat fail="0" pass="2">us04</stat>
+<stat fail="0" pass="1">us05</stat>
+<stat fail="0" pass="1">volume</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Tests" pass="8">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
