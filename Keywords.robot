@@ -4,7 +4,7 @@ Documentation     Petstore
 ...               Contains the keywords defined for Petstore automated tests 
 ...       
         
-Library           Selenium2Library   timeout=120
+Library           SeleniumLibrary   timeout=120
 Library		  Libraries/AdditionalSeleniumKeyword.py
 Library		  Libraries/RestApi.py
 Resource 	  ObjectRepository.robot
