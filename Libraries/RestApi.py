@@ -28,27 +28,27 @@ def DeleteRequest(url):
 
 def ReadAllPets():
 	print '*INFO* Calling GET /api/pets'
-	response = urllib2.urlopen('http://localhost:8080/api/pets').read()
+	response = urllib2.urlopen('http://localhost:3000/api/pets').read()
 	print '*INFO* Got response '+response
 	return json.loads(response)
 	
 def ReadPet(PetId):
 	print '*INFO* Calling GET /api/pets/'+str(PetId)
-	response = urllib2.urlopen('http://localhost:8080/api/pets/'+PetId).read()
+	response = urllib2.urlopen('http://localhost:3000/api/pets/'+PetId).read()
 	print '*INFO* Got response '+response
 	return json.loads(response)
 
 def CreatePet(PetName, PetStatus):
 	print '*INFO* Calling POST /api/pets/ with parameters: name='+str(PetName)+" - status="+str(PetStatus)
-	response = urllib2.urlopen('http://localhost:8080/api/pets', data=urllib.urlencode({ "name" : PetName, "status" : PetStatus })).read()
+	response = urllib2.urlopen('http://localhost:3000/api/pets', data=urllib.urlencode({ "name" : PetName, "status" : PetStatus })).read()
 #json.dumps( { "id" : PetId, "name" : PetName, "status" : PetStatus } )).read()
 	print '*INFO* Got response '+response
 	return json.loads(response) #,encoding='ascii')
 	
 def UpdatePet(PetId, PetName, PetStatus):
 	print '*INFO* Calling POST /api/pets/'+str(PetId)+' with parameters: name='+str(PetName)+" - status="+str(PetStatus)
-	return json.loads(PutRequest('http://localhost:8080/api/pets/'+PetId, data=urllib.urlencode({ "name" : PetName, "status" : PetStatus })).read())
+	return json.loads(PutRequest('http://localhost:3000/api/pets/'+PetId, data=urllib.urlencode({ "name" : PetName, "status" : PetStatus })).read())
 	
 def DeletePet(PetId):
 	print '*INFO* Colling DELETE /api/pets/'+str(PetId)
-	return DeleteRequest('http://localhost:8080/api/pets/'+str(PetId)).read()
+	return DeleteRequest('http://localhost:3000/api/pets/'+str(PetId)).read()
