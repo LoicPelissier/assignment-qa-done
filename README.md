@@ -16,6 +16,8 @@ Any Folder -┬- assignment-qa
             |
             └- assignment-qa-done
 ``` 
+If this folder structure is not respected, you'll have to update the paths in the file
+- Libraries/AssignmentSetup.py
 
 ## Execution
 ### Linux 
