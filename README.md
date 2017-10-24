@@ -11,11 +11,11 @@ This assignement has been developped using:
 ## Recommended folder layout
 
 In order to be able to use the assignment as-is, it is recommended to clone both the assignment and this git project in the same folder:
-
-<Any>---assignement-qa
-      |
-      |
- 
+```
+Any Folder -┬- assignment-qa
+            |
+            └- assignment-qa-done
+``` 
 
 ## Execution
 ### Linux 
