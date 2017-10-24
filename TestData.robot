@@ -21,22 +21,8 @@ ${TIMEOUT}			120
 #
 ##########################################################################
 
-${PORT}				8080
+${PORT}				3000
 ${URL}                       	http://localhost:${PORT}
-
-##########################################################################
-#
-# API (Swagger definition)
-#
-##########################################################################
-
-${API_CREATE}    POST /pets
-${API_READ}      GET /pet/{petId}
-${API_READ_ALL}  GET /pets
-${API_UPDATE}    PUT /pet/{petId}
-${API_DELETE}    DELETE /pet/{petId}
-
-
 
 ${BLACK}  rgb(51, 51, 51)
 
