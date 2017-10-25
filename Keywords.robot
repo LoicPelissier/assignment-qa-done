@@ -100,16 +100,21 @@ Create Pet Without Name
 the user tries to add a new pet
 	Empty Placeholder
 
-Pet Name and Pet status are both mandatory fields
-	Create Pet Without Status       US03TC01NT01 Name
+Pet Name is mandatory
 	Create Pet Without Name		US03TC01NT01 Status
+
+Pet Status is mandatory
+	Create Pet Without Status       US03TC01NT01 Name
+
+Pet Name and Pet status are both mandatory fields
+	Pet Name is mandatory
+	Pet Status is mandatory
 
 Input Pet Information
 	[Arguments]  	${name}	   ${status}
 	PetStore Page Should Be Displayed
 	Input Name      ${name}
 	Input Status    ${status}	
-
 	
 Create Pet Using Create Button
 	[Arguments]  	${name}	   ${status}
@@ -128,6 +133,12 @@ the user has entered Name and Status
 
 the user is able to validate his input by using either keyboard Enter key or by clicking on the create button
 	Create Pet Using Create Button  US03TC02PT01 Name  US03TC02PT01 Status
+	Create Pet Using Enter Key      US03TC02PT02 Name  US03TC02PT02 Status
+
+the user is able to validate his input by using keyboard Enter key
+	Create Pet Using Create Button  US03TC02PT01 Name  US03TC02PT01 Status
+
+the user is able to validate his input by clicking on the create button
 	Create Pet Using Enter Key      US03TC02PT02 Name  US03TC02PT02 Status
 
 the user has focused on the Pet Name field
@@ -160,7 +171,6 @@ the user has pressed SHIFT + TAB
 
 the focus should be on the Pet Name field
 	Element Should Be Focused  ${PETNAME_LOCATOR}
-
 
 the list of pets is displayed in a table like component
 	Page Should Contain Element  ${PET_LIST_AS_TABLE_LOCATOR}
@@ -203,10 +213,16 @@ Click On Pet Status And Check It Is Editable
 	Execute Javascript  document.evaluate('${NON_EDITABLE_PETSTATUS_LOCATOR_PFX}${status}${NON_EDITABLE_LIST_FIELD_PFX}',document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.click();
 	Element Should Be Visible  ${EDITABLE_PETSTATUS_LOCATOR_PFX}${status}${PET_LIST_ITEM_SFX}
 
-the user can edit a pet by clicking on its name or status
+the user can edit a pet by clicking on its name
 	Click On Pet Name And Check It Is Editable      Mickey
+
+the user can edit a pet by clicking on its status
 	Click On Pet Status And Check It Is Editable    Out of stock
 
+the user can edit a pet by clicking on its name or status
+	the user can edit a pet by clicking on its name
+	the user can edit a pet by clicking on its status
+	
 the user is editing a pet
 	Empty Placeholder
 
@@ -233,10 +249,19 @@ Edit a Pet Name Then Click Elsewhere
 	Click Element  ${PET_LIST_TITLE_LOCATOR}
 	Page Should Contain Element  ${NON_EDITABLE_PETNAME_LOCATOR_PFX}${new_name}${NON_EDITABLE_LIST_FIELD_PFX}
 
-the user has 3 ways to quit the editing
+the user can quit the editing by pressing Enter
 	Edit a Pet Name Then Press Enter      Donald  Daffy
+
+the user can quit the editing by pressing Escape
 	Edit a Pet Name Then Press Escape     Pluto   Droopy
+
+the user can quit the editing by clicking elsewhere
 	Edit a Pet Name Then Click Elsewhere  Mickey  Jerry
+
+the user has 3 ways to quit the editing
+	the user can quit the editing by pressing Enter
+	the user can quit the editing by pressing Escape
+	the user can quit the editing by clicking elsewhere
 
 Create Pet Trough REST API  
 	[Arguments]  ${name}  ${status}
