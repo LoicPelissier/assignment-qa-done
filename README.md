@@ -38,4 +38,4 @@ The assignment has also been tested on Windows 7 using a custom jar containing J
 
 The assignement can be run on previous versions of Robot and Seleniumlibrary (Selenium2library) but in that case, the library name should be changed in the file ```Keywords.robot```
 Some features used in the assessment will not work as they are new features in seleniumlibrary (hence not existing in selenium2library):
-- ```Set Focus To Element``` does not exist in the Selenium2library version that was used to test on Windows, hence breaking the test cases ```TCUS03_TC03_Accessibility sequence check``` and ```US03_TC04_Accessibility sequence check```
+- ```Set Focus To Element``` does not exist in the Selenium2library version that was used to test on Windows, hence breaking the test cases ```US03_TC03_Accessibility sequence check``` and ```US03_TC04_Accessibility sequence check```
