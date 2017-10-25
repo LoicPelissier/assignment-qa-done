@@ -140,19 +140,23 @@ US05_TC01a_Expose a REST API
 	Read All Pets Through REST API
 
 US05_TC01b_Expose a REST API
+	[Tags]  us05  rest  api  crud
 	Create Pet Trough REST API  US05TC01 Name  US05TC01 Status
 	Open Petstore Page  Chrome
 	Pet Should Exist In The List  US05TC01 Name  US05TC01 Status
 
 US05_TC01c_Expose a REST API
+	[Tags]  us05  rest  api  crud
 	Read Pet Through REST API  1  Donald
 
 US05_TC01d_Expose a REST API
+	[Tags]  us05  rest  api  crud
 	Update Pet Through REST API  1  Daffy  Available
 	Open Petstore Page  Chrome
 	Pet Should Exist In The List  Daffy  Available
 
 US05_TC01e_Expose a REST API
+	[Tags]  us05  rest  api  crud
 	# Pluto is id 2 
 	Delete Pet Through REST API  2
 	Open Petstore Page  Chrome
