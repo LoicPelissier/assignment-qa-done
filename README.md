@@ -7,6 +7,7 @@ This assignement has been developped using:
 - Selenium v3.6.0
 - RobotFramework v3.0.2
 - SeleniumLibrary v3.0.0b3
+- Locust 0.8.1
 
 ## Recommended folder layout
 
@@ -39,3 +40,9 @@ The assignment has also been tested on Windows 7 using a custom jar containing J
 The assignement can be run on previous versions of Robot and Seleniumlibrary (Selenium2library) but in that case, the library name should be changed in the file ```Keywords.robot```
 Some features used in the assessment will not work as they are new features in seleniumlibrary (hence not existing in selenium2library):
 - ```Set Focus To Element``` does not exist in the Selenium2library version that was used to test on Windows, hence breaking the test cases ```US03_TC03_Accessibility sequence check``` and ```US03_TC04_Accessibility sequence check```
+
+The ```Tests.robot``` files contains the tests exactly as described in the assignment. Another take on testing the same requirements is proposed in ```BetterTests.robot```, splitting the tests in smaller chunks in order to test all requirements even in case of failure. 
+
+### Some Non Functional Testing
+
+Some performance testing is implemented in the ```Performance/``` folder. These test are developed using the Locust python library. They focus on the petstore Rest API. A shell script ```LaunchLocust.sh``` is provided along with the tests to launch them.
